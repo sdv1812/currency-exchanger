@@ -2,11 +2,11 @@ package com.gigrt.currencyexchanger.rest;
 
 import com.gigrt.currencyexchanger.api.ApiUrl;
 import com.gigrt.currencyexchanger.exceptions.EntityNotFoundException;
-import com.gigrt.currencyexchanger.model.ExchangeCurrency;
+import com.gigrt.currencyexchanger.model.Currency;
 import com.gigrt.currencyexchanger.model.Transaction;
 import com.gigrt.currencyexchanger.model.dto.ExchangeCurrencyResponse;
 import com.gigrt.currencyexchanger.model.dto.TransactionInput;
-import com.gigrt.currencyexchanger.service.CurrencyExchangeService;
+import com.gigrt.currencyexchanger.service.ExchangeCurrencyService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,20 +19,20 @@ import java.util.List;
 
 @RestController
 @RequestMapping(ApiUrl.MODULE_CURRENCY_EXCHANGE)
-public class CurrencyExchangeRestController {
-    private static final Logger LOG = LoggerFactory.getLogger(CurrencyExchangeRestController.class);
+public class ExchangeCurrencyRestController {
+    private static final Logger LOG = LoggerFactory.getLogger(ExchangeCurrencyRestController.class);
 
-    private final CurrencyExchangeService currencyExchangeService;
+    private final ExchangeCurrencyService exchangeCurrencyService;
 
     @Autowired
-    public CurrencyExchangeRestController(CurrencyExchangeService currencyExchangeService) {
-        this.currencyExchangeService = currencyExchangeService;
+    public ExchangeCurrencyRestController(ExchangeCurrencyService exchangeCurrencyService) {
+        this.exchangeCurrencyService = exchangeCurrencyService;
     }
 
     @GetMapping
-    public List<ExchangeCurrency> getAllExchangeCurrencies() {
-        LOG.info("getAllExchangeCurrencies");
-        return currencyExchangeService.findAll();
+    public List<Currency> getAllCurrencies() {
+        LOG.info("getAllCurrencies");
+        return exchangeCurrencyService.findAll();
     }
 
     @GetMapping("from/{from}/to/{to}/quantity/{quantity}")
@@ -42,13 +42,13 @@ public class CurrencyExchangeRestController {
             @PathVariable(name = "quantity") BigDecimal quantity
             ) throws EntityNotFoundException {
         LOG.info("getConvertedAmount, from {}, to {}, quantity {}", fromCurrency, toCurrency, quantity);
-        return currencyExchangeService.getExchangeCurrency(fromCurrency, toCurrency, quantity);
+        return exchangeCurrencyService.getExchangeCurrency(fromCurrency, toCurrency, quantity);
     }
 
     @PostMapping
     public Transaction createTransaction(@Valid @RequestBody TransactionInput transactionInput) throws EntityNotFoundException {
         LOG.info("createTransaction, transaction input = {}", transactionInput);
-        ExchangeCurrencyResponse exchangeCurrencyResponse = currencyExchangeService.getExchangeCurrency(
+        ExchangeCurrencyResponse exchangeCurrencyResponse = exchangeCurrencyService.getExchangeCurrency(
                 transactionInput.getInputCurrency(),
                 transactionInput.getOutputCurrency(),
                 transactionInput.getInputQuantity());
@@ -59,7 +59,7 @@ public class CurrencyExchangeRestController {
         transaction.setOutputCurrency(exchangeCurrencyResponse.getToCurrency());
         transaction.setOutputQuantity(exchangeCurrencyResponse.getTotalCalculatedAmount());
         transaction.setTransactionDate(new Date());
-        currencyExchangeService.save(transaction);
+        exchangeCurrencyService.save(transaction);
         return transaction;
     }
 

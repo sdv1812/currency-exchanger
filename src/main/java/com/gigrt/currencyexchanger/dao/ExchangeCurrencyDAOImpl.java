@@ -1,6 +1,6 @@
 package com.gigrt.currencyexchanger.dao;
 
-import com.gigrt.currencyexchanger.model.ExchangeCurrency;
+import com.gigrt.currencyexchanger.model.Currency;
 import com.gigrt.currencyexchanger.model.Transaction;
 import com.gigrt.currencyexchanger.utility.CollectionUtil;
 import org.slf4j.Logger;
@@ -12,28 +12,28 @@ import javax.persistence.EntityManager;
 import java.util.List;
 
 @Repository
-public class CurrencyExchangeDAOImpl implements CurrencyExchangeDAO {
+public class ExchangeCurrencyDAOImpl implements ExchangeCurrencyDAO {
 
-    private static final Logger LOG = LoggerFactory.getLogger(CurrencyExchangeDAOImpl.class);
+    private static final Logger LOG = LoggerFactory.getLogger(ExchangeCurrencyDAOImpl.class);
 
     private final EntityManager em;
 
     @Autowired
-    public CurrencyExchangeDAOImpl(EntityManager entityManager) {
+    public ExchangeCurrencyDAOImpl(EntityManager entityManager) {
         this.em = entityManager;
     }
 
     @Override
-    public List<ExchangeCurrency> findAll() {
+    public List<Currency> findAll() {
         LOG.info("findAll");
-        return em.createNamedQuery("ExchangeCurrency.findAll", ExchangeCurrency.class)
+        return em.createNamedQuery("Currency.findAll", Currency.class)
                 .getResultList();
     }
 
     @Override
-    public ExchangeCurrency findByName(String currency) {
+    public Currency findByName(String currency) {
         LOG.info("findByName, currency = {}", currency);
-        List<ExchangeCurrency> exchangeCurrencyList = em.createNamedQuery("ExchangeCurrency.findByName", ExchangeCurrency.class)
+        List<Currency> exchangeCurrencyList = em.createNamedQuery("Currency.findByName", Currency.class)
                 .setParameter("name", currency)
                 .getResultList();
         if (CollectionUtil.isNotEmpty(exchangeCurrencyList)) {

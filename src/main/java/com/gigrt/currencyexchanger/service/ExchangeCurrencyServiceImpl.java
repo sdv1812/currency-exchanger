@@ -1,10 +1,10 @@
 package com.gigrt.currencyexchanger.service;
 
-import com.gigrt.currencyexchanger.dao.CurrencyExchangeDAO;
+import com.gigrt.currencyexchanger.dao.ExchangeCurrencyDAO;
 import com.gigrt.currencyexchanger.exceptions.EntityNotFoundException;
 import com.gigrt.currencyexchanger.exceptions.ErrorMessages;
-import com.gigrt.currencyexchanger.manager.CurrencyExchangeManager;
-import com.gigrt.currencyexchanger.model.ExchangeCurrency;
+import com.gigrt.currencyexchanger.manager.ExchangeCurrencyManager;
+import com.gigrt.currencyexchanger.model.Currency;
 import com.gigrt.currencyexchanger.model.Transaction;
 import com.gigrt.currencyexchanger.model.dto.ExchangeCurrencyResponse;
 import org.slf4j.Logger;
@@ -18,37 +18,36 @@ import java.math.BigDecimal;
 import java.util.List;
 
 @Service
-public class CurrencyExchangeServiceImpl implements CurrencyExchangeService{
+public class ExchangeCurrencyServiceImpl implements ExchangeCurrencyService {
 
-    private static final Logger LOG = LoggerFactory.getLogger(CurrencyExchangeServiceImpl.class);
-
-    @Autowired
-    private CurrencyExchangeDAO currencyExchangeDAO;
+    private static final Logger LOG = LoggerFactory.getLogger(ExchangeCurrencyServiceImpl.class);
 
     @Autowired
-    private CurrencyExchangeManager currencyExchangeManager;
+    private ExchangeCurrencyDAO exchangeCurrencyDAO;
+
+    @Autowired
+    private ExchangeCurrencyManager exchangeCurrencyManager;
 
     @Override
-    public List<ExchangeCurrency> findAll() {
-        return currencyExchangeDAO.findAll();
+    public List<Currency> findAll() {
+        return exchangeCurrencyDAO.findAll();
     }
 
     @Override
     public ExchangeCurrencyResponse getExchangeCurrency(String fromCurrency, String toCurrency, BigDecimal quantity) throws EntityNotFoundException {
         LOG.info("getExchangeCurrency, fromCurrency = {}, toCurrency = {}, quantity = {}", fromCurrency, toCurrency, quantity);
-        ExchangeCurrency sourceCurrency = currencyExchangeDAO.findByName(fromCurrency);
+        Currency sourceCurrency = exchangeCurrencyDAO.findByName(fromCurrency);
         if (null == sourceCurrency) {
             throw new EntityNotFoundException(String.format(ErrorMessages.CURRENCY_NOT_FOUND.getMessage(LocaleContextHolder.getLocale()), fromCurrency));
         }
-        ExchangeCurrency targetCurrency = currencyExchangeDAO.findByName(toCurrency);
+        Currency targetCurrency = exchangeCurrencyDAO.findByName(toCurrency);
         if (null == targetCurrency) {
             throw new EntityNotFoundException(String.format(ErrorMessages.CURRENCY_NOT_FOUND.getMessage(LocaleContextHolder.getLocale()), toCurrency));
         }
         LOG.debug("sourceCurrency = {}", sourceCurrency);
         LOG.debug("targetCurrency = {}", targetCurrency);
-        BigDecimal convertedBaseCurrency = currencyExchangeManager.convertedBaseCurrency(sourceCurrency, quantity);
-        BigDecimal convertedCurrency = currencyExchangeManager.convertedCurrency(targetCurrency, convertedBaseCurrency);
-        BigDecimal exchangeRate = currencyExchangeManager.calculateExchangeRate(quantity, convertedCurrency);
+        BigDecimal convertedCurrency = exchangeCurrencyManager.calculateExchangeAmount(sourceCurrency, targetCurrency, quantity);
+        BigDecimal exchangeRate = exchangeCurrencyManager.calculateExchangeRate(quantity, convertedCurrency);
         return new ExchangeCurrencyResponse(fromCurrency, toCurrency, exchangeRate, quantity, convertedCurrency);
     }
 
@@ -56,8 +55,6 @@ public class CurrencyExchangeServiceImpl implements CurrencyExchangeService{
     @Transactional
     public void save(Transaction transaction) {
         LOG.info("save transaction = {}", transaction);
-        currencyExchangeManager.save(transaction);
+        exchangeCurrencyDAO.save(transaction);
     }
-
-
 }

@@ -1,4 +1,4 @@
-package com.gigrt.currencyexchanger.rest;
+package com.gigrt.currencyexchanger.dao;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class CurrencyExchangeRestControllerTest {
+class ExchangeCurrencyDAOImplTest {
 
     @BeforeEach
     void setUp() {
@@ -17,14 +17,14 @@ class CurrencyExchangeRestControllerTest {
     }
 
     @Test
-    void getAllExchangeCurrencies() {
+    void findAll() {
     }
 
     @Test
-    void getConvertedAmount() {
+    void findByName() {
     }
 
     @Test
-    void createTransaction() {
+    void save() {
     }
 }
