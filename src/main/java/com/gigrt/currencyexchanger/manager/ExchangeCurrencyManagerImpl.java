@@ -25,9 +25,12 @@ public class ExchangeCurrencyManagerImpl implements ExchangeCurrencyManager {
     }
 
     @Override
-    public BigDecimal calculateExchangeAmount(Currency sourceCurrency, Currency targetCurrency, BigDecimal quantity) {
+    public BigDecimal calculateExchangeAmount(Currency sourceCurrency, Currency targetCurrency, BigDecimal quantity) throws InternalServerException {
         LOG.info("convertedCurrency");
         BigDecimal convertedBaseCurrencyQuantity = convertedBaseCurrency(sourceCurrency, quantity);
+        if (targetCurrency.getExchangeRate() == null) {
+            throw new InternalServerException(ErrorMessages.EXCHANGE_RATE_NULL.getMessage(LocaleContextHolder.getLocale()));
+        }
         return convertedBaseCurrencyQuantity.multiply(targetCurrency.getExchangeRate());
     }
 

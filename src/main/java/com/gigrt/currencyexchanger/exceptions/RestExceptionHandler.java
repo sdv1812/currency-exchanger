@@ -14,6 +14,7 @@ import org.springframework.http.converter.HttpMessageNotReadableException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.context.request.WebRequest;
+import org.springframework.web.method.annotation.MethodArgumentTypeMismatchException;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 
 import javax.validation.ConstraintViolation;
@@ -46,6 +47,7 @@ public class RestExceptionHandler extends ResponseEntityExceptionHandler {
         apiError.setMessage(ex.getMessage());
         return buildResponseEntity(apiError);
     }
+
     @ExceptionHandler(ConstraintViolationException.class)
     protected ResponseEntity<Object> handleEntityConstraintViolation(
             ConstraintViolationException ex, Locale locale) {
@@ -68,11 +70,30 @@ public class RestExceptionHandler extends ResponseEntityExceptionHandler {
 
     @ExceptionHandler(InternalServerException.class)
     protected ResponseEntity<Object> handleInternalServerError(
-            InternalServerException ex, Locale locale) {
+            InternalServerException ex) {
         LOG.error("Exception {}", ex.getMessage(), ex);
         ApiError apiError = new ApiError(HttpStatus.INTERNAL_SERVER_ERROR);
         apiError.setMessage(ex.getMessage());
         return buildResponseEntity(apiError);
+    }
+
+    @ExceptionHandler(NumberFormatException.class)
+    protected ResponseEntity<Object> handleNumberFOrmatException(
+            NumberFormatException ex
+    ) {
+        LOG.error("Exception {}", ex.getMessage(), ex);
+        ApiError apiError = new ApiError(HttpStatus.BAD_REQUEST);
+        apiError.setMessage(ex.getMessage());
+        return buildResponseEntity(apiError);
+    }
+
+    @ExceptionHandler(MethodArgumentTypeMismatchException.class)
+    protected ResponseEntity<Object> handleMethodArgMismatch(
+            InternalServerException ex, Locale locale
+    ) {
+        LOG.error("Exception {}", ex.getMessage(), ex);
+        String error = ErrorMessages.ARGS_PASSED_INVALID.getMessage(locale);
+        return buildResponseEntity(new ApiError(HttpStatus.BAD_REQUEST, error, ex));
     }
 
     //other exception handlers below

@@ -69,4 +69,13 @@ public class Currency implements Serializable {
     public void setExchangeRate(BigDecimal exchangeRate) {
         this.exchangeRate = exchangeRate;
     }
+
+    @Override
+    public String toString() {
+        return "Currency{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", exchangeRate=" + exchangeRate +
+                '}';
+    }
 }

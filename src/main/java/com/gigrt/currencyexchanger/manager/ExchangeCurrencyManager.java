@@ -7,7 +7,7 @@ import java.math.BigDecimal;
 
 public interface ExchangeCurrencyManager {
 
-    BigDecimal calculateExchangeAmount(Currency sourceCurrency, Currency targetCurrency, BigDecimal quantity);
+    BigDecimal calculateExchangeAmount(Currency sourceCurrency, Currency targetCurrency, BigDecimal quantity) throws InternalServerException;
 
     BigDecimal calculateExchangeRate(Currency originalCurrency, Currency targetCurrency) throws InternalServerException;
 

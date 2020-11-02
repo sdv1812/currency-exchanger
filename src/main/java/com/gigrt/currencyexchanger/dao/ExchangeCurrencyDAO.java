@@ -10,5 +10,5 @@ public interface ExchangeCurrencyDAO {
 
     Currency findByName(String currency);
 
-    void save(Transaction transaction);
+    Transaction save(Transaction transaction);
 }

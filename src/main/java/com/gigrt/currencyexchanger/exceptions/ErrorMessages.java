@@ -11,7 +11,9 @@ public enum ErrorMessages {
     NOT_READABLE("exception.not.readable"),
     INVALID_FIELDS("exception.constraint.violation"),
     CURRENCY_NOT_FOUND("exception.currency.not.found"),
-    EXCHANGE_RATE_NULL("exception.exchange.rate.null");
+    EXCHANGE_RATE_NULL("exception.exchange.rate.null"),
+    ARGS_PASSED_INVALID("exception.args.invalid"),
+    QUANTITY_NEGATIVE("exception.quantity.negative");
 
     private static final Logger logger = LoggerFactory.getLogger(ErrorMessages.class);
 

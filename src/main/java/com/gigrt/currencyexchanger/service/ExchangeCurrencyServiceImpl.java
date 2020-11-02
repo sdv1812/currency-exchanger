@@ -55,8 +55,8 @@ public class ExchangeCurrencyServiceImpl implements ExchangeCurrencyService {
 
     @Override
     @Transactional
-    public void save(Transaction transaction) {
+    public Transaction save(Transaction transaction) {
         LOG.info("save transaction = {}", transaction);
-        exchangeCurrencyDAO.save(transaction);
+        return exchangeCurrencyDAO.save(transaction);
     }
 }

@@ -14,5 +14,5 @@ public interface ExchangeCurrencyService {
 
     ExchangeCurrencyResponse getExchangeCurrency(String fromCurrency, String toCurrency, BigDecimal quantity) throws EntityNotFoundException, InternalServerException;
 
-    void save(Transaction transaction);
+    Transaction save(Transaction transaction);
 }

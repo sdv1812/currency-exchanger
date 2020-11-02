@@ -6,7 +6,6 @@ import java.math.BigDecimal;
 
 public class TransactionInput implements Serializable {
     private static final long serialVersionUID = 1L;
-//    @NotNull(message = "{inputQuantity.not.empty}")
     private BigDecimal inputQuantity;
 //    @NotNull(message = "{inputCurrency.not.empty}")
     private String inputCurrency;

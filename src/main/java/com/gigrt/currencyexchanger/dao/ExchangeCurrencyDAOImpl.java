@@ -43,9 +43,8 @@ public class ExchangeCurrencyDAOImpl implements ExchangeCurrencyDAO {
     }
 
     @Override
-    public void save(Transaction transaction) {
+    public Transaction save(Transaction transaction) {
         LOG.info("save Transaction, transaction = {}", transaction);
-        Transaction savedTransaction = em.merge(transaction);
-        transaction.setId(savedTransaction.getId());
+        return em.merge(transaction);
     }
 }

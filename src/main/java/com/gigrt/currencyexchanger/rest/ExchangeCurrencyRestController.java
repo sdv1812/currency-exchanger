@@ -2,17 +2,22 @@ package com.gigrt.currencyexchanger.rest;
 
 import com.gigrt.currencyexchanger.api.ApiUrl;
 import com.gigrt.currencyexchanger.exceptions.EntityNotFoundException;
+import com.gigrt.currencyexchanger.exceptions.ErrorMessages;
 import com.gigrt.currencyexchanger.exceptions.InternalServerException;
 import com.gigrt.currencyexchanger.model.Currency;
 import com.gigrt.currencyexchanger.model.Transaction;
 import com.gigrt.currencyexchanger.model.dto.ExchangeCurrencyResponse;
 import com.gigrt.currencyexchanger.model.dto.TransactionInput;
 import com.gigrt.currencyexchanger.service.ExchangeCurrencyService;
+import com.sun.istack.NotNull;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.i18n.LocaleContextHolder;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.client.HttpClientErrorException;
 
+import javax.validation.ConstraintViolationException;
 import javax.validation.Valid;
 import java.math.BigDecimal;
 import java.util.Date;
@@ -43,6 +48,9 @@ public class ExchangeCurrencyRestController {
             @PathVariable(name = "quantity") BigDecimal quantity
             ) throws EntityNotFoundException, InternalServerException {
         LOG.info("getConvertedAmount, from {}, to {}, quantity {}", fromCurrency, toCurrency, quantity);
+        if (quantity.compareTo(BigDecimal.ZERO) < 0) {
+            throw new NumberFormatException(ErrorMessages.QUANTITY_NEGATIVE.getMessage(LocaleContextHolder.getLocale()));
+        }
         return exchangeCurrencyService.getExchangeCurrency(fromCurrency, toCurrency, quantity);
     }
 
@@ -60,8 +68,7 @@ public class ExchangeCurrencyRestController {
         transaction.setOutputCurrency(exchangeCurrencyResponse.getToCurrency());
         transaction.setOutputQuantity(exchangeCurrencyResponse.getTotalCalculatedAmount());
         transaction.setTransactionDate(new Date());
-        exchangeCurrencyService.save(transaction);
-        return transaction;
+        return exchangeCurrencyService.save(transaction);
     }
 
 }
