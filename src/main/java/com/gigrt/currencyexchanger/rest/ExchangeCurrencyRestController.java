@@ -2,6 +2,7 @@ package com.gigrt.currencyexchanger.rest;
 
 import com.gigrt.currencyexchanger.api.ApiUrl;
 import com.gigrt.currencyexchanger.exceptions.EntityNotFoundException;
+import com.gigrt.currencyexchanger.exceptions.InternalServerException;
 import com.gigrt.currencyexchanger.model.Currency;
 import com.gigrt.currencyexchanger.model.Transaction;
 import com.gigrt.currencyexchanger.model.dto.ExchangeCurrencyResponse;
@@ -40,13 +41,13 @@ public class ExchangeCurrencyRestController {
             @PathVariable(name = "from") String fromCurrency,
             @PathVariable(name = "to") String toCurrency,
             @PathVariable(name = "quantity") BigDecimal quantity
-            ) throws EntityNotFoundException {
+            ) throws EntityNotFoundException, InternalServerException {
         LOG.info("getConvertedAmount, from {}, to {}, quantity {}", fromCurrency, toCurrency, quantity);
         return exchangeCurrencyService.getExchangeCurrency(fromCurrency, toCurrency, quantity);
     }
 
     @PostMapping
-    public Transaction createTransaction(@Valid @RequestBody TransactionInput transactionInput) throws EntityNotFoundException {
+    public Transaction createTransaction(@Valid @RequestBody TransactionInput transactionInput) throws EntityNotFoundException, InternalServerException {
         LOG.info("createTransaction, transaction input = {}", transactionInput);
         ExchangeCurrencyResponse exchangeCurrencyResponse = exchangeCurrencyService.getExchangeCurrency(
                 transactionInput.getInputCurrency(),

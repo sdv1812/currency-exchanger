@@ -6691,3 +6691,141 @@ Caused by: java.sql.SQLException: HikariDataSource HikariDataSource (HikariPool-
 2020-11-02 21:24:40.023  INFO 98027 --- [http-nio-8080-exec-9] c.g.c.m.ExchangeCurrencyManagerImpl      : convertedCurrency
 2020-11-02 21:24:40.024  INFO 98027 --- [http-nio-8080-exec-9] c.g.c.m.ExchangeCurrencyManagerImpl      : convertedBaseCurrency
 2020-11-02 21:24:40.024  INFO 98027 --- [http-nio-8080-exec-9] c.g.c.m.ExchangeCurrencyManagerImpl      : calculateExchangeRate; originalCurrency = 1, targetCurrency = 0.243332568516
+2020-11-02 21:40:46.757  INFO 98027 --- [http-nio-8080-exec-2] c.g.c.r.ExchangeCurrencyRestController   : getConvertedAmount, from USD, to INR, quantity 1
+2020-11-02 21:40:46.757  INFO 98027 --- [http-nio-8080-exec-2] c.g.c.s.ExchangeCurrencyServiceImpl      : getExchangeCurrency, fromCurrency = USD, toCurrency = INR, quantity = 1
+2020-11-02 21:40:46.758  INFO 98027 --- [http-nio-8080-exec-2] c.g.c.dao.ExchangeCurrencyDAOImpl        : findByName, currency = USD
+2020-11-02 21:40:46.759  INFO 98027 --- [http-nio-8080-exec-2] c.g.c.dao.ExchangeCurrencyDAOImpl        : findByName, currency = INR
+2020-11-02 21:40:46.760  INFO 98027 --- [http-nio-8080-exec-2] c.g.c.m.ExchangeCurrencyManagerImpl      : convertedCurrency
+2020-11-02 21:40:46.761  INFO 98027 --- [http-nio-8080-exec-2] c.g.c.m.ExchangeCurrencyManagerImpl      : convertedBaseCurrency
+2020-11-02 21:40:46.761  INFO 98027 --- [http-nio-8080-exec-2] c.g.c.m.ExchangeCurrencyManagerImpl      : calculateExchangeRate; originalCurrency = 1, targetCurrency = 73.312686920000
+2020-11-02 21:43:16.912  INFO 98027 --- [Thread-20] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-11-02 21:43:16.912  INFO 98027 --- [Thread-20] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2020-11-02 21:43:16.919  INFO 98027 --- [Thread-20] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-11-02 21:43:17.121  WARN 98027 --- [Thread-20] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2020-11-02 21:43:17.121  INFO 98027 --- [Thread-20] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2020-11-02 21:43:17.122  INFO 98027 --- [Thread-20] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2020-11-02 21:43:17.281  INFO 98027 --- [restartedMain] c.g.c.CurrencyexchangerApplication       : Starting CurrencyexchangerApplication on Kelvins-MBP with PID 98027 (/Users/kelvinzhuang/Desktop/sanskar/SansProg/currencyexchanger/target/classes started by kelvinzhuang in /Users/kelvinzhuang/Desktop/sanskar/SansProg/currencyexchanger)
+2020-11-02 21:43:17.282  INFO 98027 --- [restartedMain] c.g.c.CurrencyexchangerApplication       : No active profile set, falling back to default profiles: default
+2020-11-02 21:43:17.383  INFO 98027 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-11-02 21:43:17.385  INFO 98027 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 2ms. Found 0 JPA repository interfaces.
+2020-11-02 21:43:17.456  INFO 98027 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-11-02 21:43:17.457  INFO 98027 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-11-02 21:43:17.457  INFO 98027 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.39]
+2020-11-02 21:43:17.462  INFO 98027 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2020-11-02 21:43:17.462  INFO 98027 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 179 ms
+2020-11-02 21:43:17.478  INFO 98027 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
+2020-11-02 21:43:17.480  INFO 98027 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
+2020-11-02 21:43:17.480  INFO 98027 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2020-11-02 21:43:17.504  INFO 98027 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-02 21:43:17.511  INFO 98027 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-11-02 21:43:17.515  INFO 98027 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-11-02 21:43:17.533  WARN 98027 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'exchangeCurrencyRestController' defined in file [/Users/kelvinzhuang/Desktop/sanskar/SansProg/currencyexchanger/target/classes/com/gigrt/currencyexchanger/rest/ExchangeCurrencyRestController.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.gigrt.currencyexchanger.service.ExchangeCurrencyService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2020-11-02 21:43:17.533  INFO 98027 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-11-02 21:43:17.564  INFO 98027 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-11-02 21:43:17.570  INFO 98027 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-11-02 21:43:17.570  INFO 98027 --- [restartedMain] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2020-11-02 21:43:17.574  INFO 98027 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-11-02 21:43:17.775  WARN 98027 --- [restartedMain] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2020-11-02 21:43:17.775  INFO 98027 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown initiated...
+2020-11-02 21:43:17.835  INFO 98027 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown completed.
+2020-11-02 21:43:17.836  INFO 98027 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2020-11-02 21:43:17.843  INFO 98027 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-11-02 21:43:17.984 ERROR 98027 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.gigrt.currencyexchanger.rest.ExchangeCurrencyRestController required a bean of type 'com.gigrt.currencyexchanger.service.ExchangeCurrencyService' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.gigrt.currencyexchanger.service.ExchangeCurrencyService' in your configuration.
+
+2020-11-02 21:43:19.876  INFO 98027 --- [restartedMain] c.g.c.CurrencyexchangerApplication       : Starting CurrencyexchangerApplication on Kelvins-MBP with PID 98027 (/Users/kelvinzhuang/Desktop/sanskar/SansProg/currencyexchanger/target/classes started by kelvinzhuang in /Users/kelvinzhuang/Desktop/sanskar/SansProg/currencyexchanger)
+2020-11-02 21:43:19.876  INFO 98027 --- [restartedMain] c.g.c.CurrencyexchangerApplication       : No active profile set, falling back to default profiles: default
+2020-11-02 21:43:20.104  INFO 98027 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-11-02 21:43:20.107  INFO 98027 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3ms. Found 0 JPA repository interfaces.
+2020-11-02 21:43:20.196  INFO 98027 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-11-02 21:43:20.196  INFO 98027 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-11-02 21:43:20.196  INFO 98027 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.39]
+2020-11-02 21:43:20.201  INFO 98027 --- [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/api]  : Initializing Spring embedded WebApplicationContext
+2020-11-02 21:43:20.201  INFO 98027 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 316 ms
+2020-11-02 21:43:20.215  INFO 98027 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Starting...
+2020-11-02 21:43:20.216  INFO 98027 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Start completed.
+2020-11-02 21:43:20.216  INFO 98027 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2020-11-02 21:43:20.239  INFO 98027 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-02 21:43:20.244  INFO 98027 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-11-02 21:43:20.250  INFO 98027 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-11-02 21:43:20.280  WARN 98027 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-11-02 21:43:20.288  INFO 98027 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-11-02 21:43:20.293  INFO 98027 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-11-02 21:43:20.319  INFO 98027 --- [task-2] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-11-02 21:43:20.354  INFO 98027 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/api'
+2020-11-02 21:43:20.355  INFO 98027 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-11-02 21:43:20.355  INFO 98027 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-11-02 21:43:20.358  INFO 98027 --- [restartedMain] c.g.c.CurrencyexchangerApplication       : Started CurrencyexchangerApplication in 0.548 seconds (JVM running for 2569.713)
+2020-11-02 21:43:20.364  INFO 98027 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-11-02 21:43:37.940  INFO 98027 --- [Thread-25] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-11-02 21:43:37.941  INFO 98027 --- [Thread-25] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2020-11-02 21:43:37.943  INFO 98027 --- [Thread-25] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-11-02 21:43:38.147  WARN 98027 --- [Thread-25] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2020-11-02 21:43:38.148  INFO 98027 --- [Thread-25] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown initiated...
+2020-11-02 21:43:38.154  INFO 98027 --- [Thread-25] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown completed.
+2020-11-02 21:43:38.423  INFO 98027 --- [restartedMain] c.g.c.CurrencyexchangerApplication       : Starting CurrencyexchangerApplication on Kelvins-MBP with PID 98027 (/Users/kelvinzhuang/Desktop/sanskar/SansProg/currencyexchanger/target/classes started by kelvinzhuang in /Users/kelvinzhuang/Desktop/sanskar/SansProg/currencyexchanger)
+2020-11-02 21:43:38.423  INFO 98027 --- [restartedMain] c.g.c.CurrencyexchangerApplication       : No active profile set, falling back to default profiles: default
+2020-11-02 21:43:38.598  INFO 98027 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-11-02 21:43:38.604  INFO 98027 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5ms. Found 0 JPA repository interfaces.
+2020-11-02 21:43:38.735  INFO 98027 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-11-02 21:43:38.736  INFO 98027 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-11-02 21:43:38.736  INFO 98027 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.39]
+2020-11-02 21:43:38.744  INFO 98027 --- [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/api]  : Initializing Spring embedded WebApplicationContext
+2020-11-02 21:43:38.744  INFO 98027 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 318 ms
+2020-11-02 21:43:38.766  INFO 98027 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Starting...
+2020-11-02 21:43:38.769  INFO 98027 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Start completed.
+2020-11-02 21:43:38.769  INFO 98027 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2020-11-02 21:43:38.799  INFO 98027 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-02 21:43:38.807  INFO 98027 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-11-02 21:43:38.812  INFO 98027 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-11-02 21:43:38.860  WARN 98027 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-11-02 21:43:38.867  INFO 98027 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-11-02 21:43:38.878  INFO 98027 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-11-02 21:43:38.915  INFO 98027 --- [task-2] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-11-02 21:43:38.975  INFO 98027 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/api'
+2020-11-02 21:43:38.976  INFO 98027 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-11-02 21:43:38.976  INFO 98027 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-11-02 21:43:38.980  INFO 98027 --- [restartedMain] c.g.c.CurrencyexchangerApplication       : Started CurrencyexchangerApplication in 0.592 seconds (JVM running for 2588.335)
+2020-11-02 21:43:38.982  INFO 98027 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-11-02 21:43:42.999  INFO 98027 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat-1].[localhost].[/api]  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-11-02 21:43:43.000  INFO 98027 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-11-02 21:43:43.002  INFO 98027 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2020-11-02 21:43:43.003  INFO 98027 --- [http-nio-8080-exec-2] c.g.c.r.ExchangeCurrencyRestController   : getAllCurrencies
+2020-11-02 21:43:43.009  INFO 98027 --- [http-nio-8080-exec-2] c.g.c.dao.ExchangeCurrencyDAOImpl        : findAll
+2020-11-02 21:43:48.988  INFO 98027 --- [http-nio-8080-exec-3] c.g.c.r.ExchangeCurrencyRestController   : getConvertedAmount, from USD, to INR, quantity 1
+2020-11-02 21:43:48.998  INFO 98027 --- [http-nio-8080-exec-3] c.g.c.s.ExchangeCurrencyServiceImpl      : getExchangeCurrency, fromCurrency = USD, toCurrency = INR, quantity = 1
+2020-11-02 21:43:48.999  INFO 98027 --- [http-nio-8080-exec-3] c.g.c.dao.ExchangeCurrencyDAOImpl        : findByName, currency = USD
+2020-11-02 21:43:49.001  INFO 98027 --- [http-nio-8080-exec-3] c.g.c.dao.ExchangeCurrencyDAOImpl        : findByName, currency = INR
+2020-11-02 21:43:49.001  INFO 98027 --- [http-nio-8080-exec-3] c.g.c.m.ExchangeCurrencyManagerImpl      : calculateExchangeRate; sourceCurrency = com.gigrt.currencyexchanger.model.Currency@75c49c45, targetCurrency = com.gigrt.currencyexchanger.model.Currency@65c25b93
+2020-11-02 21:43:49.009  INFO 98027 --- [http-nio-8080-exec-3] c.g.c.m.ExchangeCurrencyManagerImpl      : convertedCurrency
+2020-11-02 21:43:49.009  INFO 98027 --- [http-nio-8080-exec-3] c.g.c.m.ExchangeCurrencyManagerImpl      : convertedBaseCurrency
+2020-11-02 21:43:55.827  INFO 98027 --- [http-nio-8080-exec-4] c.g.c.r.ExchangeCurrencyRestController   : getConvertedAmount, from INR, to USD, quantity 1
+2020-11-02 21:43:55.828  INFO 98027 --- [http-nio-8080-exec-4] c.g.c.s.ExchangeCurrencyServiceImpl      : getExchangeCurrency, fromCurrency = INR, toCurrency = USD, quantity = 1
+2020-11-02 21:43:55.828  INFO 98027 --- [http-nio-8080-exec-4] c.g.c.dao.ExchangeCurrencyDAOImpl        : findByName, currency = INR
+2020-11-02 21:43:55.829  INFO 98027 --- [http-nio-8080-exec-4] c.g.c.dao.ExchangeCurrencyDAOImpl        : findByName, currency = USD
+2020-11-02 21:43:55.839  INFO 98027 --- [http-nio-8080-exec-4] c.g.c.m.ExchangeCurrencyManagerImpl      : calculateExchangeRate; sourceCurrency = com.gigrt.currencyexchanger.model.Currency@6e5d8661, targetCurrency = com.gigrt.currencyexchanger.model.Currency@1a3e0e88
+2020-11-02 21:43:55.839  INFO 98027 --- [http-nio-8080-exec-4] c.g.c.m.ExchangeCurrencyManagerImpl      : convertedCurrency
+2020-11-02 21:43:55.839  INFO 98027 --- [http-nio-8080-exec-4] c.g.c.m.ExchangeCurrencyManagerImpl      : convertedBaseCurrency
+2020-11-02 21:44:07.093  INFO 98027 --- [http-nio-8080-exec-5] c.g.c.r.ExchangeCurrencyRestController   : createTransaction, transaction input = com.gigrt.currencyexchanger.model.dto.TransactionInput@5385e79d
+2020-11-02 21:44:07.098  INFO 98027 --- [http-nio-8080-exec-5] c.g.c.s.ExchangeCurrencyServiceImpl      : getExchangeCurrency, fromCurrency = SGD, toCurrency = INR, quantity = 2000
+2020-11-02 21:44:07.098  INFO 98027 --- [http-nio-8080-exec-5] c.g.c.dao.ExchangeCurrencyDAOImpl        : findByName, currency = SGD
+2020-11-02 21:44:07.099  INFO 98027 --- [http-nio-8080-exec-5] c.g.c.dao.ExchangeCurrencyDAOImpl        : findByName, currency = INR
+2020-11-02 21:44:07.105  INFO 98027 --- [http-nio-8080-exec-5] c.g.c.m.ExchangeCurrencyManagerImpl      : calculateExchangeRate; sourceCurrency = com.gigrt.currencyexchanger.model.Currency@27db956e, targetCurrency = com.gigrt.currencyexchanger.model.Currency@119dcf5c
+2020-11-02 21:44:07.105  INFO 98027 --- [http-nio-8080-exec-5] c.g.c.m.ExchangeCurrencyManagerImpl      : convertedCurrency
+2020-11-02 21:44:07.105  INFO 98027 --- [http-nio-8080-exec-5] c.g.c.m.ExchangeCurrencyManagerImpl      : convertedBaseCurrency
+2020-11-02 21:44:07.105  INFO 98027 --- [http-nio-8080-exec-5] c.g.c.s.ExchangeCurrencyServiceImpl      : save transaction = com.gigrt.currencyexchanger.model.Transaction[ id=null ]
+2020-11-02 21:44:07.114  INFO 98027 --- [http-nio-8080-exec-5] c.g.c.dao.ExchangeCurrencyDAOImpl        : save Transaction, transaction = com.gigrt.currencyexchanger.model.Transaction[ id=null ]

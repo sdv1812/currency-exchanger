@@ -33,7 +33,7 @@ class ExchangeCurrencyRestControllerTest {
 
     @Test
     void getAllExchangeCurrencies() throws Exception {
-        mvc.perform(MockMvcRequestBuilders.get("/api/v1/currency-exchange").accept(MediaType.APPLICATION_JSON))
+        mvc.perform(MockMvcRequestBuilders.get("/v1/currency-exchange").accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk());
 //                .andExpect(content().string(equalTo("Greetings from Spring Boot!")));
     }
