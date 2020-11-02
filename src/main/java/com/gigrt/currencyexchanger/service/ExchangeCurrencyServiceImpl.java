@@ -3,6 +3,7 @@ package com.gigrt.currencyexchanger.service;
 import com.gigrt.currencyexchanger.dao.ExchangeCurrencyDAO;
 import com.gigrt.currencyexchanger.exceptions.EntityNotFoundException;
 import com.gigrt.currencyexchanger.exceptions.ErrorMessages;
+import com.gigrt.currencyexchanger.exceptions.InternalServerException;
 import com.gigrt.currencyexchanger.manager.ExchangeCurrencyManager;
 import com.gigrt.currencyexchanger.model.Currency;
 import com.gigrt.currencyexchanger.model.Transaction;
@@ -34,7 +35,7 @@ public class ExchangeCurrencyServiceImpl implements ExchangeCurrencyService {
     }
 
     @Override
-    public ExchangeCurrencyResponse getExchangeCurrency(String fromCurrency, String toCurrency, BigDecimal quantity) throws EntityNotFoundException {
+    public ExchangeCurrencyResponse getExchangeCurrency(String fromCurrency, String toCurrency, BigDecimal quantity) throws EntityNotFoundException, InternalServerException {
         LOG.info("getExchangeCurrency, fromCurrency = {}, toCurrency = {}, quantity = {}", fromCurrency, toCurrency, quantity);
         Currency sourceCurrency = exchangeCurrencyDAO.findByName(fromCurrency);
         if (null == sourceCurrency) {
@@ -46,9 +47,10 @@ public class ExchangeCurrencyServiceImpl implements ExchangeCurrencyService {
         }
         LOG.debug("sourceCurrency = {}", sourceCurrency);
         LOG.debug("targetCurrency = {}", targetCurrency);
-        BigDecimal convertedCurrency = exchangeCurrencyManager.calculateExchangeAmount(sourceCurrency, targetCurrency, quantity);
-        BigDecimal exchangeRate = exchangeCurrencyManager.calculateExchangeRate(quantity, convertedCurrency);
-        return new ExchangeCurrencyResponse(fromCurrency, toCurrency, exchangeRate, quantity, convertedCurrency);
+
+        BigDecimal exchangeRate = exchangeCurrencyManager.calculateExchangeRate(sourceCurrency, targetCurrency);
+        BigDecimal exchangedAmount = exchangeCurrencyManager.calculateExchangeAmount(sourceCurrency, targetCurrency, quantity);
+        return new ExchangeCurrencyResponse(fromCurrency, toCurrency, exchangeRate, quantity, exchangedAmount);
     }
 
     @Override

@@ -10,7 +10,8 @@ import java.util.Locale;
 public enum ErrorMessages {
     NOT_READABLE("exception.not.readable"),
     INVALID_FIELDS("exception.constraint.violation"),
-    CURRENCY_NOT_FOUND("exception.currency.not.found");
+    CURRENCY_NOT_FOUND("exception.currency.not.found"),
+    EXCHANGE_RATE_NULL("exception.exchange.rate.null");
 
     private static final Logger logger = LoggerFactory.getLogger(ErrorMessages.class);
 

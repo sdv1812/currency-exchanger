@@ -6491,3 +6491,203 @@ com.gigrt.currencyexchanger.exceptions.EntityNotFoundException: Currency not fou
 2020-11-02 21:05:41.886  INFO 98027 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
 2020-11-02 21:05:41.890  INFO 98027 --- [restartedMain] c.g.c.CurrencyexchangerApplication       : Started CurrencyexchangerApplication in 0.523 seconds (JVM running for 311.243)
 2020-11-02 21:05:41.892  INFO 98027 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-11-02 21:12:54.819  INFO 98027 --- [Thread-15] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-11-02 21:12:54.820  INFO 98027 --- [Thread-15] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2020-11-02 21:12:54.823  INFO 98027 --- [Thread-15] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-11-02 21:12:55.025  WARN 98027 --- [Thread-15] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2020-11-02 21:12:55.026  INFO 98027 --- [Thread-15] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2020-11-02 21:12:55.034  INFO 98027 --- [Thread-15] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2020-11-02 21:12:57.010  INFO 98229 --- [main] g.c.r.ExchangeCurrencyRestControllerTest : Starting ExchangeCurrencyRestControllerTest on Kelvins-MBP with PID 98229 (started by kelvinzhuang in /Users/kelvinzhuang/Desktop/sanskar/SansProg/currencyexchanger)
+2020-11-02 21:12:57.012  INFO 98229 --- [main] g.c.r.ExchangeCurrencyRestControllerTest : No active profile set, falling back to default profiles: default
+2020-11-02 21:12:57.655  INFO 98229 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-11-02 21:12:57.678  INFO 98229 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16ms. Found 0 JPA repository interfaces.
+2020-11-02 21:12:58.193  INFO 98229 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-02 21:12:55.241  INFO 98027 --- [restartedMain] c.g.c.CurrencyexchangerApplication       : Starting CurrencyexchangerApplication on Kelvins-MBP with PID 98027 (/Users/kelvinzhuang/Desktop/sanskar/SansProg/currencyexchanger/target/classes started by kelvinzhuang in /Users/kelvinzhuang/Desktop/sanskar/SansProg/currencyexchanger)
+2020-11-02 21:12:58.199  INFO 98027 --- [restartedMain] c.g.c.CurrencyexchangerApplication       : No active profile set, falling back to default profiles: default
+2020-11-02 21:12:58.207  INFO 98229 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-11-02 21:12:58.329  INFO 98027 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-11-02 21:12:58.333  INFO 98027 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3ms. Found 0 JPA repository interfaces.
+2020-11-02 21:12:58.426  INFO 98027 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-11-02 21:12:58.427  INFO 98027 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-11-02 21:12:58.428  INFO 98027 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.39]
+2020-11-02 21:12:58.436  INFO 98027 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2020-11-02 21:12:58.436  INFO 98027 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 235 ms
+2020-11-02 21:12:58.444  INFO 98229 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-11-02 21:12:58.455  INFO 98027 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2020-11-02 21:12:58.457  INFO 98027 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2020-11-02 21:12:58.457  INFO 98027 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2020-11-02 21:12:58.488  INFO 98027 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-02 21:12:58.496  INFO 98027 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-11-02 21:12:58.501  INFO 98027 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-11-02 21:12:58.580  INFO 98229 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-11-02 21:12:58.640  INFO 98229 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.22.Final
+2020-11-02 21:12:58.812  INFO 98229 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-11-02 21:12:58.533  WARN 98027 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-11-02 21:12:58.550  INFO 98027 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-11-02 21:12:58.851  INFO 98027 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-11-02 21:12:58.895  INFO 98027 --- [task-2] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-11-02 21:12:58.925  WARN 98229 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-11-02 21:12:58.964  INFO 98229 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-11-02 21:12:58.970  INFO 98027 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/api'
+2020-11-02 21:12:58.971  INFO 98027 --- [restartedMain] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-11-02 21:12:58.972  INFO 98027 --- [restartedMain] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-11-02 21:12:58.976  INFO 98027 --- [restartedMain] c.g.c.CurrencyexchangerApplication       : Started CurrencyexchangerApplication in 3.762 seconds (JVM running for 748.329)
+2020-11-02 21:12:58.977  INFO 98027 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-11-02 21:12:59.291  INFO 98229 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2020-11-02 21:12:59.660  INFO 98229 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2020-11-02 21:12:59.661  INFO 98229 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2020-11-02 21:12:59.676  INFO 98229 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 15 ms
+2020-11-02 21:12:59.696  INFO 98229 --- [main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-11-02 21:12:59.698  INFO 98229 --- [main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-11-02 21:12:59.712  INFO 98229 --- [main] g.c.r.ExchangeCurrencyRestControllerTest : Started ExchangeCurrencyRestControllerTest in 3.163 seconds (JVM running for 4.927)
+2020-11-02 21:12:59.882  INFO 98229 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-11-02 21:12:59.986  INFO 98229 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-11-02 21:13:00.067  INFO 98229 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-11-02 21:13:00.068  INFO 98229 --- [SpringContextShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2020-11-02 21:13:00.071  WARN 98229 --- [SpringContextShutdownHook] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 90121, SQLState: 90121
+2020-11-02 21:13:00.071 ERROR 98229 --- [SpringContextShutdownHook] o.h.engine.jdbc.spi.SqlExceptionHelper   : Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2020-11-02 21:13:00.072  WARN 98229 --- [SpringContextShutdownHook] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 90121, SQLState: 90121
+2020-11-02 21:13:00.072 ERROR 98229 --- [SpringContextShutdownHook] o.h.engine.jdbc.spi.SqlExceptionHelper   : Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2020-11-02 21:13:00.072  WARN 98229 --- [SpringContextShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'entityManagerFactory': org.hibernate.exception.JDBCConnectionException: Unable to release JDBC Connection used for DDL execution
+2020-11-02 21:13:00.073  INFO 98229 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-11-02 21:13:00.074  INFO 98229 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-11-02 21:13:00.079  INFO 98229 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-11-02 21:13:00.143  WARN 98229 --- [task-2] o.s.jdbc.support.SQLErrorCodesFactory    : Error while extracting database name
+
+org.springframework.jdbc.support.MetaDataAccessException: Could not get Connection for extracting meta-data; nested exception is org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is java.sql.SQLException: HikariDataSource HikariDataSource (HikariPool-1) has been closed.
+	at org.springframework.jdbc.support.JdbcUtils.extractDatabaseMetaData(JdbcUtils.java:363) ~[spring-jdbc-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.jdbc.support.SQLErrorCodesFactory.resolveErrorCodes(SQLErrorCodesFactory.java:235) ~[spring-jdbc-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.lambda$setDataSource$0(SQLErrorCodeSQLExceptionTranslator.java:140) ~[spring-jdbc-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.util.function.SingletonSupplier.get(SingletonSupplier.java:97) ~[spring-core-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.setDataSource(SQLErrorCodeSQLExceptionTranslator.java:141) ~[spring-jdbc-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.<init>(SQLErrorCodeSQLExceptionTranslator.java:102) ~[spring-jdbc-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.jdbc.support.JdbcAccessor.getExceptionTranslator(JdbcAccessor.java:122) ~[spring-jdbc-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.jdbc.core.JdbcTemplate.translateException(JdbcTemplate.java:1443) ~[spring-jdbc-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:336) ~[spring-jdbc-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.boot.jdbc.EmbeddedDatabaseConnection.isEmbedded(EmbeddedDatabaseConnection.java:133) ~[spring-boot-2.3.5.RELEASE.jar:2.3.5.RELEASE]
+	at org.springframework.boot.autoconfigure.orm.jpa.DataSourceInitializedPublisher.lambda$isInitializingDatabase$0(DataSourceInitializedPublisher.java:127) ~[spring-boot-autoconfigure-2.3.5.RELEASE.jar:2.3.5.RELEASE]
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateSettings.getDdlAuto(HibernateSettings.java:41) ~[spring-boot-autoconfigure-2.3.5.RELEASE.jar:2.3.5.RELEASE]
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateProperties.determineDdlAuto(HibernateProperties.java:136) ~[spring-boot-autoconfigure-2.3.5.RELEASE.jar:2.3.5.RELEASE]
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateProperties.getAdditionalProperties(HibernateProperties.java:102) ~[spring-boot-autoconfigure-2.3.5.RELEASE.jar:2.3.5.RELEASE]
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateProperties.determineHibernateProperties(HibernateProperties.java:94) ~[spring-boot-autoconfigure-2.3.5.RELEASE.jar:2.3.5.RELEASE]
+	at org.springframework.boot.autoconfigure.orm.jpa.DataSourceInitializedPublisher.isInitializingDatabase(DataSourceInitializedPublisher.java:129) ~[spring-boot-autoconfigure-2.3.5.RELEASE.jar:2.3.5.RELEASE]
+	at org.springframework.boot.autoconfigure.orm.jpa.DataSourceInitializedPublisher.publishEventIfRequired(DataSourceInitializedPublisher.java:109) ~[spring-boot-autoconfigure-2.3.5.RELEASE.jar:2.3.5.RELEASE]
+	at org.springframework.boot.autoconfigure.orm.jpa.DataSourceInitializedPublisher.access$300(DataSourceInitializedPublisher.java:55) ~[spring-boot-autoconfigure-2.3.5.RELEASE.jar:2.3.5.RELEASE]
+	at org.springframework.boot.autoconfigure.orm.jpa.DataSourceInitializedPublisher$DataSourceSchemaCreatedPublisher.lambda$postProcessEntityManagerFactory$0(DataSourceInitializedPublisher.java:253) ~[spring-boot-autoconfigure-2.3.5.RELEASE.jar:2.3.5.RELEASE]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+Caused by: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is java.sql.SQLException: HikariDataSource HikariDataSource (HikariPool-1) has been closed.
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:82) ~[spring-jdbc-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.jdbc.support.JdbcUtils.extractDatabaseMetaData(JdbcUtils.java:337) ~[spring-jdbc-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	... 23 common frames omitted
+Caused by: java.sql.SQLException: HikariDataSource HikariDataSource (HikariPool-1) has been closed.
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:96) ~[HikariCP-3.4.5.jar:na]
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:158) ~[spring-jdbc-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:116) ~[spring-jdbc-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:79) ~[spring-jdbc-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	... 24 common frames omitted
+
+2020-11-02 21:13:00.144  WARN 98229 --- [task-2] o.s.jdbc.support.SQLErrorCodesFactory    : Error while extracting database name
+
+org.springframework.jdbc.support.MetaDataAccessException: Could not get Connection for extracting meta-data; nested exception is org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is java.sql.SQLException: HikariDataSource HikariDataSource (HikariPool-1) has been closed.
+	at org.springframework.jdbc.support.JdbcUtils.extractDatabaseMetaData(JdbcUtils.java:363) ~[spring-jdbc-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.jdbc.support.SQLErrorCodesFactory.resolveErrorCodes(SQLErrorCodesFactory.java:235) ~[spring-jdbc-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.lambda$setDataSource$0(SQLErrorCodeSQLExceptionTranslator.java:140) ~[spring-jdbc-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.util.function.SingletonSupplier.get(SingletonSupplier.java:97) ~[spring-core-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.util.function.SupplierUtils.resolve(SupplierUtils.java:40) ~[spring-core-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.getSqlErrorCodes(SQLErrorCodeSQLExceptionTranslator.java:171) ~[spring-jdbc-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator.doTranslate(SQLErrorCodeSQLExceptionTranslator.java:193) ~[spring-jdbc-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:72) ~[spring-jdbc-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.jdbc.core.JdbcTemplate.translateException(JdbcTemplate.java:1443) ~[spring-jdbc-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:336) ~[spring-jdbc-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.boot.jdbc.EmbeddedDatabaseConnection.isEmbedded(EmbeddedDatabaseConnection.java:133) ~[spring-boot-2.3.5.RELEASE.jar:2.3.5.RELEASE]
+	at org.springframework.boot.autoconfigure.orm.jpa.DataSourceInitializedPublisher.lambda$isInitializingDatabase$0(DataSourceInitializedPublisher.java:127) ~[spring-boot-autoconfigure-2.3.5.RELEASE.jar:2.3.5.RELEASE]
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateSettings.getDdlAuto(HibernateSettings.java:41) ~[spring-boot-autoconfigure-2.3.5.RELEASE.jar:2.3.5.RELEASE]
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateProperties.determineDdlAuto(HibernateProperties.java:136) ~[spring-boot-autoconfigure-2.3.5.RELEASE.jar:2.3.5.RELEASE]
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateProperties.getAdditionalProperties(HibernateProperties.java:102) ~[spring-boot-autoconfigure-2.3.5.RELEASE.jar:2.3.5.RELEASE]
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateProperties.determineHibernateProperties(HibernateProperties.java:94) ~[spring-boot-autoconfigure-2.3.5.RELEASE.jar:2.3.5.RELEASE]
+	at org.springframework.boot.autoconfigure.orm.jpa.DataSourceInitializedPublisher.isInitializingDatabase(DataSourceInitializedPublisher.java:129) ~[spring-boot-autoconfigure-2.3.5.RELEASE.jar:2.3.5.RELEASE]
+	at org.springframework.boot.autoconfigure.orm.jpa.DataSourceInitializedPublisher.publishEventIfRequired(DataSourceInitializedPublisher.java:109) ~[spring-boot-autoconfigure-2.3.5.RELEASE.jar:2.3.5.RELEASE]
+	at org.springframework.boot.autoconfigure.orm.jpa.DataSourceInitializedPublisher.access$300(DataSourceInitializedPublisher.java:55) ~[spring-boot-autoconfigure-2.3.5.RELEASE.jar:2.3.5.RELEASE]
+	at org.springframework.boot.autoconfigure.orm.jpa.DataSourceInitializedPublisher$DataSourceSchemaCreatedPublisher.lambda$postProcessEntityManagerFactory$0(DataSourceInitializedPublisher.java:253) ~[spring-boot-autoconfigure-2.3.5.RELEASE.jar:2.3.5.RELEASE]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+Caused by: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is java.sql.SQLException: HikariDataSource HikariDataSource (HikariPool-1) has been closed.
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:82) ~[spring-jdbc-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.jdbc.support.JdbcUtils.extractDatabaseMetaData(JdbcUtils.java:337) ~[spring-jdbc-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	... 24 common frames omitted
+Caused by: java.sql.SQLException: HikariDataSource HikariDataSource (HikariPool-1) has been closed.
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:96) ~[HikariCP-3.4.5.jar:na]
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:158) ~[spring-jdbc-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:116) ~[spring-jdbc-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:79) ~[spring-jdbc-5.2.10.RELEASE.jar:5.2.10.RELEASE]
+	... 25 common frames omitted
+
+2020-11-02 21:13:51.041  INFO 98239 --- [main] g.c.r.ExchangeCurrencyRestControllerTest : Starting ExchangeCurrencyRestControllerTest on Kelvins-MBP with PID 98239 (started by kelvinzhuang in /Users/kelvinzhuang/Desktop/sanskar/SansProg/currencyexchanger)
+2020-11-02 21:13:51.042  INFO 98239 --- [main] g.c.r.ExchangeCurrencyRestControllerTest : No active profile set, falling back to default profiles: default
+2020-11-02 21:13:51.696  INFO 98239 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2020-11-02 21:13:51.720  INFO 98239 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 15ms. Found 0 JPA repository interfaces.
+2020-11-02 21:13:52.262  INFO 98239 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-02 21:13:52.276  INFO 98239 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-11-02 21:13:52.460  INFO 98239 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-11-02 21:13:52.600  INFO 98239 --- [task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-11-02 21:13:52.668  INFO 98239 --- [task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.22.Final
+2020-11-02 21:13:52.837  INFO 98239 --- [task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-11-02 21:13:52.947  WARN 98239 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-11-02 21:13:52.985  INFO 98239 --- [task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2020-11-02 21:13:53.331  INFO 98239 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2020-11-02 21:13:53.681  INFO 98239 --- [main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2020-11-02 21:13:53.681  INFO 98239 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2020-11-02 21:13:53.693  INFO 98239 --- [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 12 ms
+2020-11-02 21:13:53.710  INFO 98239 --- [main] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2020-11-02 21:13:53.711  INFO 98239 --- [main] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2020-11-02 21:13:53.725  INFO 98239 --- [main] g.c.r.ExchangeCurrencyRestControllerTest : Started ExchangeCurrencyRestControllerTest in 3.031 seconds (JVM running for 4.598)
+2020-11-02 21:13:53.933  INFO 98239 --- [task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-11-02 21:13:54.048  INFO 98239 --- [task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-11-02 21:13:54.178  INFO 98239 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-11-02 21:13:54.179  INFO 98239 --- [SpringContextShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2020-11-02 21:13:54.185  WARN 98239 --- [SpringContextShutdownHook] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 90121, SQLState: 90121
+2020-11-02 21:13:54.186 ERROR 98239 --- [SpringContextShutdownHook] o.h.engine.jdbc.spi.SqlExceptionHelper   : Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2020-11-02 21:13:54.189  WARN 98239 --- [SpringContextShutdownHook] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 90121, SQLState: 90121
+2020-11-02 21:13:54.189 ERROR 98239 --- [SpringContextShutdownHook] o.h.engine.jdbc.spi.SqlExceptionHelper   : Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2020-11-02 21:13:54.190  WARN 98239 --- [SpringContextShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'entityManagerFactory': org.hibernate.exception.JDBCConnectionException: Unable to release JDBC Connection used for DDL execution
+2020-11-02 21:13:54.191  INFO 98239 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-11-02 21:13:54.193  INFO 98239 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-11-02 21:13:54.203  INFO 98239 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-11-02 21:20:20.264  INFO 98027 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-11-02 21:20:20.265  INFO 98027 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-11-02 21:20:20.278  INFO 98027 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 13 ms
+2020-11-02 21:20:20.287  INFO 98027 --- [http-nio-8080-exec-2] c.g.c.r.ExchangeCurrencyRestController   : getConvertedAmount, from USD, to INR, quantity 1
+2020-11-02 21:20:20.308  INFO 98027 --- [http-nio-8080-exec-2] c.g.c.s.ExchangeCurrencyServiceImpl      : getExchangeCurrency, fromCurrency = USD, toCurrency = INR, quantity = 1
+2020-11-02 21:20:20.317  INFO 98027 --- [http-nio-8080-exec-2] c.g.c.dao.ExchangeCurrencyDAOImpl        : findByName, currency = USD
+2020-11-02 21:20:20.320  INFO 98027 --- [http-nio-8080-exec-2] c.g.c.dao.ExchangeCurrencyDAOImpl        : findByName, currency = INR
+2020-11-02 21:20:20.321  INFO 98027 --- [http-nio-8080-exec-2] c.g.c.m.ExchangeCurrencyManagerImpl      : convertedCurrency
+2020-11-02 21:20:20.321  INFO 98027 --- [http-nio-8080-exec-2] c.g.c.m.ExchangeCurrencyManagerImpl      : convertedBaseCurrency
+2020-11-02 21:20:20.322  INFO 98027 --- [http-nio-8080-exec-2] c.g.c.m.ExchangeCurrencyManagerImpl      : calculateExchangeRate; originalCurrency = 1, targetCurrency = 73.312686920000
+2020-11-02 21:23:10.957  INFO 98027 --- [http-nio-8080-exec-3] c.g.c.r.ExchangeCurrencyRestController   : getConvertedAmount, from SGD, to INR, quantity 1
+2020-11-02 21:23:10.958  INFO 98027 --- [http-nio-8080-exec-3] c.g.c.s.ExchangeCurrencyServiceImpl      : getExchangeCurrency, fromCurrency = SGD, toCurrency = INR, quantity = 1
+2020-11-02 21:23:10.959  INFO 98027 --- [http-nio-8080-exec-3] c.g.c.dao.ExchangeCurrencyDAOImpl        : findByName, currency = SGD
+2020-11-02 21:23:10.960  INFO 98027 --- [http-nio-8080-exec-3] c.g.c.dao.ExchangeCurrencyDAOImpl        : findByName, currency = INR
+2020-11-02 21:23:10.962  INFO 98027 --- [http-nio-8080-exec-3] c.g.c.m.ExchangeCurrencyManagerImpl      : convertedCurrency
+2020-11-02 21:23:10.963  INFO 98027 --- [http-nio-8080-exec-3] c.g.c.m.ExchangeCurrencyManagerImpl      : convertedBaseCurrency
+2020-11-02 21:23:10.970  INFO 98027 --- [http-nio-8080-exec-3] c.g.c.m.ExchangeCurrencyManagerImpl      : calculateExchangeRate; originalCurrency = 1, targetCurrency = 54.410000000000
+2020-11-02 21:23:20.689  INFO 98027 --- [http-nio-8080-exec-4] c.g.c.r.ExchangeCurrencyRestController   : getConvertedAmount, from RMB, to INR, quantity 1
+2020-11-02 21:23:20.689  INFO 98027 --- [http-nio-8080-exec-4] c.g.c.s.ExchangeCurrencyServiceImpl      : getExchangeCurrency, fromCurrency = RMB, toCurrency = INR, quantity = 1
+2020-11-02 21:23:20.689  INFO 98027 --- [http-nio-8080-exec-4] c.g.c.dao.ExchangeCurrencyDAOImpl        : findByName, currency = RMB
+2020-11-02 21:23:20.691  INFO 98027 --- [http-nio-8080-exec-4] c.g.c.dao.ExchangeCurrencyDAOImpl        : findByName, currency = INR
+2020-11-02 21:23:20.692  INFO 98027 --- [http-nio-8080-exec-4] c.g.c.m.ExchangeCurrencyManagerImpl      : convertedCurrency
+2020-11-02 21:23:20.692  INFO 98027 --- [http-nio-8080-exec-4] c.g.c.m.ExchangeCurrencyManagerImpl      : convertedBaseCurrency
+2020-11-02 21:23:20.692  INFO 98027 --- [http-nio-8080-exec-4] c.g.c.m.ExchangeCurrencyManagerImpl      : calculateExchangeRate; originalCurrency = 1, targetCurrency = 17.839352290000
+2020-11-02 21:24:40.019  INFO 98027 --- [http-nio-8080-exec-9] c.g.c.r.ExchangeCurrencyRestController   : getConvertedAmount, from RMB, to USD, quantity 1
+2020-11-02 21:24:40.020  INFO 98027 --- [http-nio-8080-exec-9] c.g.c.s.ExchangeCurrencyServiceImpl      : getExchangeCurrency, fromCurrency = RMB, toCurrency = USD, quantity = 1
+2020-11-02 21:24:40.020  INFO 98027 --- [http-nio-8080-exec-9] c.g.c.dao.ExchangeCurrencyDAOImpl        : findByName, currency = RMB
+2020-11-02 21:24:40.021  INFO 98027 --- [http-nio-8080-exec-9] c.g.c.dao.ExchangeCurrencyDAOImpl        : findByName, currency = USD
+2020-11-02 21:24:40.023  INFO 98027 --- [http-nio-8080-exec-9] c.g.c.m.ExchangeCurrencyManagerImpl      : convertedCurrency
+2020-11-02 21:24:40.024  INFO 98027 --- [http-nio-8080-exec-9] c.g.c.m.ExchangeCurrencyManagerImpl      : convertedBaseCurrency
+2020-11-02 21:24:40.024  INFO 98027 --- [http-nio-8080-exec-9] c.g.c.m.ExchangeCurrencyManagerImpl      : calculateExchangeRate; originalCurrency = 1, targetCurrency = 0.243332568516

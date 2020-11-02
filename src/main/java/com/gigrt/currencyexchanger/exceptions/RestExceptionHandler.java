@@ -65,6 +65,16 @@ public class RestExceptionHandler extends ResponseEntityExceptionHandler {
         apiError.setSubErrors(apiSubErrors);
         return buildResponseEntity(apiError);
     }
+
+    @ExceptionHandler(InternalServerException.class)
+    protected ResponseEntity<Object> handleInternalServerError(
+            InternalServerException ex, Locale locale) {
+        LOG.error("Exception {}", ex.getMessage(), ex);
+        ApiError apiError = new ApiError(HttpStatus.INTERNAL_SERVER_ERROR);
+        apiError.setMessage(ex.getMessage());
+        return buildResponseEntity(apiError);
+    }
+
     //other exception handlers below
 
 }
