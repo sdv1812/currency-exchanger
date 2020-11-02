@@ -1,4 +1,8 @@
+# GITGR Test Assessment
 
+
+
+## Part 1
 **What are your opinions in the usage of interfaces in general?
 The concept of interfaces exists for a reason, but when and how should we use it?** 
 	- If you want to take advantage of multiple inheritance
@@ -19,3 +23,28 @@ Classes like these are available to help us to do all the mathematical operation
 		
 I believe that frameworks like these helps the developer in creating better, testable and bug free code. However, there is huge learning curve and it makes the program more complex. Unless the requirements deems it, I believe in keeping the code as simple as possible.
 
+
+#Part 2
+**api/v1/currency-exchange**
+
+curl --location --request GET 'http://localhost:8080/api/v1/currency-exchange' \
+
+**api/v1/currency-exchange/from/USD/to/SGD/quantity/1**
+
+curl --location --request GET 'http://localhost:8080/api/v1/currency-exchange/from/SGD/to/USD/quantity/19000' \
+
+
+**api/v1/currency-exchange**
+curl --location --request POST 'http://localhost:8080/api/v1/currency-exchange' \
+
+--header 'Content-Type: application/json' \
+
+--data-raw '{
+
+"inputQuantity": 2000,
+
+"inputCurrency": "SGD",
+
+"outputCurrency": "INR"
+
+}'
