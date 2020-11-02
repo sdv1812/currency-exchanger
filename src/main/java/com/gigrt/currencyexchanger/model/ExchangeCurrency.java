@@ -8,6 +8,7 @@ package com.gigrt.currencyexchanger.model;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
+import java.util.Objects;
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import javax.xml.bind.annotation.XmlRootElement;
@@ -26,8 +27,8 @@ public class ExchangeCurrency extends Currency implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    @Column(name = "id")
-    private Integer id;
+//    @Column(name = "id")
+//    private Integer id;
     @Basic(optional = false)
     @NotNull
     @Column(name = "exchange_rate")
@@ -43,24 +44,22 @@ public class ExchangeCurrency extends Currency implements Serializable {
     }
 
     public ExchangeCurrency(Integer id) {
-        super();
-        this.id = id;
+        super(id);
     }
 
-    public ExchangeCurrency(Integer id, BigDecimal exchangeRate, Date date) {
-        super();
-        this.id = id;
+    public ExchangeCurrency(Integer id, String name, BigDecimal exchangeRate, Date date) {
+        super(id, name);
         this.exchangeRate = exchangeRate;
         this.date = date;
     }
 
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
+//    public Integer getId() {
+//        return id;
+//    }
+//
+//    public void setId(Integer id) {
+//        this.id = id;
+//    }
 
     public BigDecimal getExchangeRate() {
         return exchangeRate;
@@ -78,29 +77,12 @@ public class ExchangeCurrency extends Currency implements Serializable {
         this.date = date;
     }
 
-    @Override
-    public int hashCode() {
-        int hash = 0;
-        hash += (id != null ? id.hashCode() : 0);
-        return hash;
-    }
-
-    @Override
-    public boolean equals(Object object) {
-        // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof ExchangeCurrency)) {
-            return false;
-        }
-        ExchangeCurrency other = (ExchangeCurrency) object;
-        if ((this.id == null && other.id != null) || (this.id != null && !this.id.equals(other.id))) {
-            return false;
-        }
-        return true;
-    }
 
     @Override
     public String toString() {
-        return "com.gigrt.currencyexchanger.model.ExchangeCurrency[ id=" + id + " ]";
+        return "ExchangeCurrency{" +
+                "exchangeRate=" + exchangeRate +
+                ", date=" + date +
+                '}';
     }
-
 }
