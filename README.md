@@ -24,7 +24,7 @@ Classes like these are available to help us to do all the mathematical operation
 I believe that frameworks like these helps the developer in creating better, testable and bug free code. However, there is huge learning curve and it makes the program more complex. Unless the requirements deems it, I believe in keeping the code as simple as possible.
 
 
-#Part 2
+## Part 2
 **api/v1/currency-exchange**
 
 curl --location --request GET 'http://localhost:8080/api/v1/currency-exchange' \
