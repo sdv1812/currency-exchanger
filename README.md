@@ -48,3 +48,12 @@ curl --location --request POST 'http://localhost:8080/api/v1/currency-exchange' 
 "outputCurrency": "INR"
 
 }'
+
+## To connect to in memory database:
+
+Once the application is running you can connect to database using: 
+
+http://localhost:8080/api/h2-console/
+JDBC URL: jdbc:h2:mem:testdb
+username: sa
+password: password
