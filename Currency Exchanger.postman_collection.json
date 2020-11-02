@@ -11,7 +11,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/api/v1/currency",
+					"raw": "http://localhost:8080/api/v1/currency-exchange",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -20,7 +20,7 @@
 					"path": [
 						"api",
 						"v1",
-						"currency"
+						"currency-exchange"
 					]
 				}
 			},
@@ -32,7 +32,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/api/v1/currency/from/SGD/to/USD/quantity/19000",
+					"raw": "http://localhost:8080/api/v1/currency-exchange/from/SGD/to/USD/quantity/19000",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -41,7 +41,7 @@
 					"path": [
 						"api",
 						"v1",
-						"currency",
+						"currency-exchange",
 						"from",
 						"SGD",
 						"to",
